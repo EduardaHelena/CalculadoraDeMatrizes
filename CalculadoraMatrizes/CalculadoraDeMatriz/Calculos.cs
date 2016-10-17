@@ -8,7 +8,14 @@ namespace CalculadoraDeMatriz
 {
     class Calculos
     {
+
         #region Soma de matrizes
+        /// <summary>
+        /// método de somar as matrízes
+        /// </summary>
+        /// <param name="matriz1"></matriz1 em float>
+        /// <param name="matriz2"></matriz2 em float>
+        /// <returns></returns>
         public static float[,] SomandoMatrizes(float[,] matriz1, float[,] matriz2)
         {
             float[,] matrizResultado = new float[matriz1.GetLongLength(0), matriz1.GetLength(1)];
@@ -22,8 +29,19 @@ namespace CalculadoraDeMatriz
             return matrizResultado;
         }
         #endregion
-
+        /// <summary>
+        /// método de somar as matrízes
+        /// </summary>
+        /// <param name="matriz1"></matriz1 em float>
+        /// <param name="matriz2"></matriz2 em float>
+        /// <returns></returns>
         #region Subtração de matrizes
+        /// <summary>
+        /// método de subtrair as matrízes
+        /// </summary>
+        /// <param name="matriz1"></matriz1 em float>
+        /// <param name="matriz2"></matriz2 em float>
+        /// <returns></returns>
         public static float[,] SubtraindoMatrizes(float[,] matriz1, float[,] matriz2)
         {
             float[,] matrizResultado = new float[matriz1.GetLongLength(0), matriz1.GetLength(1)];
@@ -39,6 +57,12 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Multiplicacao de Matrizes
+        /// <summary>
+        /// método de multiplicar as matrízes
+        /// </summary>
+        /// <param name="matriz1"></matriz1 em float>
+        /// <param name="matriz2"></matriz2 em float>
+        /// <returns></returns>
         public static float[,] MultiplicandoMatrizes(float[,] matriz1, float[,] matriz2)
         {
             float[,] matrizResultado = new float[matriz1.GetLength(0), matriz2.GetLength(1)];
@@ -58,6 +82,12 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Mutiplicacao Escalar
+        /// <summary>
+        /// método de multiplicação de uma matriz por um número escalar
+        /// </summary>
+        /// <param name="matriz1"></matriz escolhida em float>
+        /// <param name="valor"></número escalar em float>
+        /// <returns></returns>
         public static float[,] EscalarMatriz(float[,] matriz, float valor)
         {
             float[,] matrixfinal = new float[matriz.GetLength(0), matriz.GetLength(1)];
@@ -75,6 +105,11 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Matriz Oposta
+        /// <summary>
+        /// método de obter a matriz oposta de uma matriz
+        /// </summary>
+        /// <param name="matriz"></matriz escolhida em float>
+        /// <returns></returns>
         public static float[,] GerarOposta(float[,] matriz)
         {
             float[,] matrizOposta = new float[matriz.GetLength(0), matriz.GetLength(1)];
@@ -90,14 +125,20 @@ namespace CalculadoraDeMatriz
         #endregion 
 
         #region matriz Inversa
-        public static float[,] GerarInversa(float determinante, float[,] matriz1)
+        /// <summary>
+        /// método de obter a matriz inversa de uma matriz
+        /// </summary>
+        /// <param name="determinante"></determinante da matriz escolhida em float>
+        /// <param name="mmatriz"></matriz escolhida em float>
+        /// <returns></returns>
+        public static float[,] GerarInversa(float determinante, float[,] matriz)
         {
-            float[,] matrizInversa = new float[matriz1.GetLength(0), matriz1.GetLength(1)];
-            for (int x = 0; x < matriz1.GetLength(0); x++)
+            float[,] matrizInversa = new float[matriz.GetLength(0), matriz.GetLength(1)];
+            for (int x = 0; x < matriz.GetLength(0); x++)
             {
-                for (int y = 0; y < matriz1.GetLength(1); y++)
+                for (int y = 0; y < matriz.GetLength(1); y++)
                 {
-                    float n = matriz1[x, y];
+                    float n = matriz[x, y];
                     n = n / determinante;
                     matrizInversa[x, y] += n;
                 }
@@ -108,6 +149,11 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Matriz Transposta
+        /// <summary>
+        /// método de subtrair as matrízes
+        /// </summary>
+        /// <param name="matriz"></matriz escolhida em float>
+        /// <returns></returns>
         public static float[,] GerarTransposta(float[,] matriz)
         {
             float[,] matrizTransposta = new float[matriz.GetLength(1), matriz.GetLength(0)];
@@ -212,6 +258,11 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Determinante 2x2
+        /// <summary>
+        /// método de obter determinante de matrizes 2x2
+        /// </summary>
+        /// <param name="matriz"></matriz escolhida em float>
+        /// <returns></returns>
         public static float GerarDeterminante2x2(float[,] matriz)
         {
             float diagonalPrincipal = 1;
@@ -243,6 +294,11 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Determinante 3x3
+        /// <summary>
+        /// método de obter determinante de matrizes 3x3
+        /// </summary>
+        /// <param name="matriz"></matriz escolhida em float>
+        /// <returns></returns>
         public static float GerarDeterminante3x3(float[,] matriz)
         {
             float diagonalPrincipal = 0;
@@ -305,6 +361,13 @@ namespace CalculadoraDeMatriz
         }
         #endregion
 
+        /// <summary>
+        /// método de gerar matrizes a partir da lei de formação
+        /// </summary>
+        /// <param name="Lei"></string digitada pelo usuário>
+        /// <param name="lines"></quantidade de linhas em int>
+        /// <param name="col"></quantidade de colunas em int>
+        /// <returns></returns>
         #region Lei De Formação
         public static float[,] LeiDeFormacao(string lei, int lines, int col)
         {

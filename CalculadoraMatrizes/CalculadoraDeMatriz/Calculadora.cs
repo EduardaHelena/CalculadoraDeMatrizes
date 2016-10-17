@@ -17,12 +17,19 @@ namespace CalculadoraDeMatriz
             InitializeComponent();
         }
 
-        private TextBox[,] Matriz1;
-        private TextBox[,] Matriz2;
-        private TextBox[,] matrizResultado;
+        private TextBox[,] Matriz1; //variável para o plote da matriz 1
+        private TextBox[,] Matriz2; //variável para  o plote da matriz 2
+        private TextBox[,] matrizResultado; //variável para o plote da matriz resultante
 
 
         #region CriarMatrizes
+        
+
+        /// <summary>
+        /// métodos para plotar as matrizes 1 e 2
+        /// </summary>
+        /// <param name="Matriz1"> primeira matriz na tela</param>
+        /// <param name="Matriz2"> segunda matriz na tela</param>
         private void Gerar_Click(object sender, EventArgs e)
         {
             groupBox1.Controls.Clear();
@@ -67,7 +74,6 @@ namespace CalculadoraDeMatriz
                 }
             }
         }
-
 
         private void Gerar2_Click(object sender, EventArgs e)
         {
@@ -117,16 +123,19 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Limpar
+       //método para limpar o campo da matriz resultante
         private void LimparResult_Click_1(object sender, EventArgs e)
         {
             groupBox3.Controls.Clear();
         }
 
+        //método para limpar o campo da matriz 2
         private void Limpar2_Click(object sender, EventArgs e)
         {
             groupBox2.Controls.Clear();
         }
 
+        //método para limpar o campo da matriz 1
         private void Limpa_Click(object sender, EventArgs e)
         {
             groupBox1.Controls.Clear();
@@ -135,23 +144,27 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Soma Matrizes
-
+        /// <summary>
+        /// métodos para somar as matrizes 1 e 2
+        /// </summary>
+        /// <param name="Matriz1"> primeira matriz na tela</param>
+        /// <param name="Matriz2"> segunda matriz na tela</param>
         private void BotaoSoma_Click(object sender, EventArgs e)
         {
            if (Matriz1 == null || Matriz2 == null)
             {
-                MessageBox.Show("Matriz nula !", "Error - Matriz");
+                MessageBox.Show("Matriz nula !", "Erro - Matriz"); 
                 return;
             }
             float[,] tempMatriz1 = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
             float[,] tempMatriz2 = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
             {
-                MessageBox.Show("Só é possível somar matrizes de mesma ordem !", "Erro - Soma Matrizes");
+                MessageBox.Show("Só é possível somar matrizes de mesma ordem !", "Erro - Soma Matrizes"); //mensagem de erro se tentarem somar matrizes não-quadradas
                 return;
             }
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte os elementos da matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -160,7 +173,7 @@ namespace CalculadoraDeMatriz
                     tempMatriz1[x, y] = n;
                 }
             }
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++)  //converte os elementos da matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -174,7 +187,7 @@ namespace CalculadoraDeMatriz
             matrizResultado = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
             groupBox3.Controls.Clear();
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota matriz resultante da soma
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -193,6 +206,11 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Subtração Matrizes
+        /// <summary>
+        /// métodos para subtrair as matrizes 1 e 2
+        /// </summary>
+        /// <param name="Matriz1"> primeira matriz na tela</param>
+        /// <param name="Matriz2"> segunda matriz na tela</param>
         private void BotaoSubtrair_Click(object sender, EventArgs e)
         {
             if (Matriz1 == null || Matriz2 == null)
@@ -204,11 +222,11 @@ namespace CalculadoraDeMatriz
             float[,] tempMatriz2 = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
             {
-                MessageBox.Show("Somente é possível a subtração de matrizes de mesma ordem !");
+                MessageBox.Show("Somente é possível a subtração de matrizes de mesma ordem !"); //mensagem de erro para case tentem subtrair matrizes que não sejam de mesma ordem
                 return;
             }
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -217,7 +235,7 @@ namespace CalculadoraDeMatriz
                     tempMatriz1[x, y] = n;
                 }
             }
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -231,7 +249,7 @@ namespace CalculadoraDeMatriz
             matrizResultado = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
             groupBox3.Controls.Clear();
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz resultante
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -247,11 +265,16 @@ namespace CalculadoraDeMatriz
         #endregion
 
         #region Multiplicacao de Matrizes
+        /// <summary>
+        /// métodos para multiplicação entre as matrizes 1 e 2
+        /// </summary>
+        /// <param name="Matriz1"> primeira matriz na tela</param>
+        /// <param name="Matriz2"> segunda matriz na tela</param>
         private void Multiplica_Click(object sender, EventArgs e)
         {
              if (Matriz1 == null || Matriz2 == null)
             {
-                MessageBox.Show("Matriz nula !", "Error - Matriz");
+                MessageBox.Show("Matriz nula !", "Error - Matriz"); 
                 return;
             }
             float[,] tempMatriz1 = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
@@ -262,7 +285,7 @@ namespace CalculadoraDeMatriz
                 return;
             }
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 em um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -271,7 +294,7 @@ namespace CalculadoraDeMatriz
                     tempMatriz1[x, y] = n;
                 }
             }
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz1 em um conjunto de flaot
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -285,7 +308,7 @@ namespace CalculadoraDeMatriz
             matrizResultado = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
             groupBox3.Controls.Clear();
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz resultante
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -303,12 +326,12 @@ namespace CalculadoraDeMatriz
         #endregion 
 
 
-
+        //OPERAÇÕES COM A MATRIZ 1
         #region EscolhaMatriz1
        
         private void oper_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //estrutura de controle para gerenciar a execução de operações com a matriz1 [OPOSTA,INVERSA,DETERMINANTE]
                     switch (oper.Text) {
      
 
@@ -338,6 +361,7 @@ namespace CalculadoraDeMatriz
         #endregion 
 
         #region Multiplicacao Escalar1
+        //o método a seguir multipica a matriz1 por um número escalar
         private void MultiEscalar_Click(object sender, EventArgs e)
         {
             if (Matriz1 == null)
@@ -348,7 +372,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempResultante = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -360,7 +384,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.EscalarMatriz(tempResultante, (float)NuEscalar1.Value); ;
             int TamanhoText = groupBox1.Width / Matriz1.GetLength(1);
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //plota a matriz1 multiplicada por um número escalar
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -382,7 +406,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -394,7 +418,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.GerarOposta(tempResultante);
             int TamanhoText = groupBox1.Width / Matriz1.GetLength(1);
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //plota a matriz oposta da matriz1
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -428,7 +452,7 @@ namespace CalculadoraDeMatriz
                 }
             }
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -452,17 +476,17 @@ namespace CalculadoraDeMatriz
             }
             else
             {
-                MessageBox.Show("Matriz invalida !", "Error - Matriz");
+                MessageBox.Show("Matriz inválida !", "Error - Matriz");
                 return;
             }
             if (determinante == 0)
             {
-                MessageBox.Show("Matriz invalida, determinante igual a 0 !", "Error - Matriz");
+                MessageBox.Show("Matriz inválida, determinante igual a 0 !", "Error - Matriz");
                 return;
             }
             float[,] tempMatrizResultante = Calculos.GerarInversa(determinante, matrizAdjunta);
             int TamanhoText = groupBox1.Width / Matriz1.GetLength(1);
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //plota a matriz inversa da matriz1
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -483,7 +507,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -497,7 +521,7 @@ namespace CalculadoraDeMatriz
             int TamanhoText = groupBox1.Width / Matriz1.GetLength(1);
             Matriz1 = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             groupBox1.Controls.Clear();
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //plota a matriz transposta da matriz1
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -524,7 +548,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz1.GetLength(0), Matriz1.GetLength(1)];
 
-            for (int x = 0; x < Matriz1.GetLength(0); x++)
+            for (int x = 0; x < Matriz1.GetLength(0); x++) //converte a matriz1 para um conjunto de float
             {
                 for (int y = 0; y < Matriz1.GetLength(1); y++)
                 {
@@ -536,27 +560,27 @@ namespace CalculadoraDeMatriz
             if (tempResultante.GetLength(0) == 2 && tempResultante.GetLength(1) == 2)
             {
                 float determinante = Calculos.GerarDeterminante2x2(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante..."); //anuncia o respectivo determinante caso a matriz1 seja de ordem 2
             }
             else if (tempResultante.GetLength(0) == 3 && tempResultante.GetLength(1) == 3)
             {
                 float determinante = Calculos.GerarDeterminante3x3(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante..."); //anuncia o respectivo determinante caso a matriz1 seja de ordem 3
             }
             else
             {
-                MessageBox.Show("Não é possível gerar determinante !", "Error - Matriz invalida ");
+                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida "); 
             }
         }
 
         #endregion
 
-
+        //OPERAÇÕES COM A MATRIZ 2
         #region EscolhaMatriz2
-
+       
         private void oper2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //estrutura de controle para gerenciar a execução de operações com a matriz2
             switch (oper2.Text)
             {
 
@@ -599,7 +623,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempResultante = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
 
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -611,7 +635,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.EscalarMatriz(tempResultante, (float)NuEscalar2.Value); ;
             int TamanhoText = groupBox2.Width / Matriz2.GetLength(1);
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //plota a matriz2 multiplicada por um número escalar
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -632,7 +656,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
 
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -644,7 +668,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.GerarOposta(tempResultante);
             int TamanhoText = groupBox2.Width / Matriz2.GetLength(1);
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //plota a matriz oposta da matriz2
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -678,7 +702,7 @@ namespace CalculadoraDeMatriz
                 }
             }
 
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -712,7 +736,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempMatrizResultante = Calculos.GerarInversa(determinante, matrizAdjunta);
             int TamanhoText = groupBox2.Width / Matriz2.GetLength(1);
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //plota a matriz inversa da matriz2
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -733,14 +757,13 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
 
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
                     float n = 0;
                     float.TryParse(Matriz2[x, y].Text, out n);
                     tempResultante[x, y] = n;
-                    //tempResultante[x, y] = Convert.ToInt32(Matriz2[x, y].Text);
                 }
             }
 
@@ -748,7 +771,7 @@ namespace CalculadoraDeMatriz
             int TamanhoText = groupBox2.Width / Matriz2.GetLength(1);
             Matriz2 = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             groupBox2.Controls.Clear();
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //plota a matriz transposta da matriz2
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -775,7 +798,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
 
-            for (int x = 0; x < Matriz2.GetLength(0); x++)
+            for (int x = 0; x < Matriz2.GetLength(0); x++) //converte a matriz2 para um conjunto de float
             {
                 for (int y = 0; y < Matriz2.GetLength(1); y++)
                 {
@@ -787,27 +810,27 @@ namespace CalculadoraDeMatriz
             if (tempResultante.GetLength(0) == 2 && tempResultante.GetLength(1) == 2)
             {
                 float determinante = Calculos.GerarDeterminante2x2(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante...");  //anuncia o respectivo determinante caso a matriz2 seja de ordem 3
             }
             else if (tempResultante.GetLength(0) == 3 && tempResultante.GetLength(1) == 3)
             {
                 float determinante = Calculos.GerarDeterminante3x3(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante...");  //anuncia o respectivo determinante caso a matriz2 seja de ordem 3
             }
             else
             {
-                MessageBox.Show("Não é possível gerar determinante !", "Error - Matriz invalida ");
+                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida ");
             }
         }
 
         #endregion
 
-
+        //OPERAÇÕES COM A MATRIZ RESULTANTE 
         #region EscolhaMatrizResultante
-
+        
         private void operResultante_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //estrutura de controle para gerenciar a execução de operações com a matriz resultante
             switch (operResultante.Text)
             {
 
@@ -848,7 +871,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempResultante = new float[matrizResultado.GetLength(0), matrizResultado.GetLength(1)];
 
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //converte a matriz resultante para um conjunto de float
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -860,7 +883,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.EscalarMatriz(tempResultante, (float)NuEscalar3.Value); ;
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz resultante multiplicada por um número escalar
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -881,7 +904,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[matrizResultado.GetLength(0), matrizResultado.GetLength(1)];
 
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //converte a matriz resultante para um conjunto de float
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -893,7 +916,7 @@ namespace CalculadoraDeMatriz
 
             float[,] tempMatrizResultante = Calculos.GerarOposta(tempResultante);
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz oposta da matriz resultante 
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -927,7 +950,7 @@ namespace CalculadoraDeMatriz
                 }
             }
 
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //converte a matriz resultante para um conjunto de float
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -961,7 +984,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempMatrizResultante = Calculos.GerarInversa(determinante, matrizAdjunta);
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz oposta da resultante 
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -982,7 +1005,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[matrizResultado.GetLength(0), matrizResultado.GetLength(1)];
 
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //converte a matriz resultante para um conjunto de float
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -996,7 +1019,7 @@ namespace CalculadoraDeMatriz
             int TamanhoText = groupBox3.Width / matrizResultado.GetLength(1);
             matrizResultado = new TextBox[tempMatrizResultante.GetLength(0), tempMatrizResultante.GetLength(1)];
             groupBox3.Controls.Clear();
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //plota a matriz transposta da resultante
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -1023,7 +1046,7 @@ namespace CalculadoraDeMatriz
             }
             float[,] tempResultante = new float[matrizResultado.GetLength(0), matrizResultado.GetLength(1)];
 
-            for (int x = 0; x < matrizResultado.GetLength(0); x++)
+            for (int x = 0; x < matrizResultado.GetLength(0); x++) //converte a matriz resultante para um conjunto de float
             {
                 for (int y = 0; y < matrizResultado.GetLength(1); y++)
                 {
@@ -1035,16 +1058,16 @@ namespace CalculadoraDeMatriz
             if (tempResultante.GetLength(0) == 2 && tempResultante.GetLength(1) == 2)
             {
                 float determinante = Calculos.GerarDeterminante2x2(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante...");  //anuncia o respectivo determinante caso a matriz resultante seja de ordem 3
             }
             else if (tempResultante.GetLength(0) == 3 && tempResultante.GetLength(1) == 3)
             {
                 float determinante = Calculos.GerarDeterminante3x3(tempResultante);
-                MessageBox.Show("" + determinante, "Determinante...");
+                MessageBox.Show("" + determinante, "Determinante..."); //anuncia o respectivo determinante caso a matriz resultante seja de ordem 3
             }
             else
             {
-                MessageBox.Show("Não é possível gerar determinante !", "Error - Matriz invalida ");
+                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida ");
             }
         }
 

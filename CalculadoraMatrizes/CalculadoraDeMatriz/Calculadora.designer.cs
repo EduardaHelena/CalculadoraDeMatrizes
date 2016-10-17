@@ -604,13 +604,13 @@
             // BotaoSubtrair
             // 
             this.BotaoSubtrair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.BotaoSubtrair.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoSubtrair.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
             this.BotaoSubtrair.ForeColor = System.Drawing.Color.Teal;
             this.BotaoSubtrair.Location = new System.Drawing.Point(378, 271);
             this.BotaoSubtrair.Name = "BotaoSubtrair";
-            this.BotaoSubtrair.Size = new System.Drawing.Size(114, 28);
+            this.BotaoSubtrair.Size = new System.Drawing.Size(114, 26);
             this.BotaoSubtrair.TabIndex = 27;
-            this.BotaoSubtrair.Text = "A - B";
+            this.BotaoSubtrair.Text = "matriz1-matriz2\n";
             this.toolTip4.SetToolTip(this.BotaoSubtrair, "Subtrai as matrizes");
             this.BotaoSubtrair.UseVisualStyleBackColor = false;
             this.BotaoSubtrair.Click += new System.EventHandler(this.BotaoSubtrair_Click);
@@ -638,7 +638,7 @@
             this.BotaoAlternar.Name = "BotaoAlternar";
             this.BotaoAlternar.Size = new System.Drawing.Size(114, 28);
             this.BotaoAlternar.TabIndex = 25;
-            this.BotaoAlternar.Text = "Alternar";
+            this.BotaoAlternar.Text = "Alternar matrizes";
             this.toolTip4.SetToolTip(this.BotaoAlternar, "Alterna as matrizes");
             this.BotaoAlternar.UseVisualStyleBackColor = false;
             // 
@@ -651,7 +651,7 @@
             this.BotaoSoma.Name = "BotaoSoma";
             this.BotaoSoma.Size = new System.Drawing.Size(114, 28);
             this.BotaoSoma.TabIndex = 24;
-            this.BotaoSoma.Text = "A + B";
+            this.BotaoSoma.Text = "matriz1+matriz2";
             this.toolTip4.SetToolTip(this.BotaoSoma, "Soma as Matrizes");
             this.BotaoSoma.UseVisualStyleBackColor = false;
             this.BotaoSoma.Click += new System.EventHandler(this.BotaoSoma_Click);
@@ -665,7 +665,7 @@
             this.Multiplica.Name = "Multiplica";
             this.Multiplica.Size = new System.Drawing.Size(114, 28);
             this.Multiplica.TabIndex = 23;
-            this.Multiplica.Text = "A * B";
+            this.Multiplica.Text = "matriz1 * matriz2";
             this.toolTip4.SetToolTip(this.Multiplica, "Multiplica  as  Matrizes");
             this.Multiplica.UseVisualStyleBackColor = false;
             this.Multiplica.Click += new System.EventHandler(this.Multiplica_Click);

@@ -290,6 +290,51 @@
         BzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzBzxDD//Z
 </value>
   </data>
+  <data name="AjudaDet1ao3.Text" xml:space="preserve">
+    <value>DETERMINANTE → 
+A toda matriz quadrada (mesmo número de linhas e colunas) está associado um número ao qual damos o nome de determinante.
+DET. DE MATRIZ 1 x 1: Neste caso, o determinante equivale ao único elemento da matriz.
+DET. DE MATRIZ 2 x 2: Neste caso, o determinante será calculado a partir da diferença entre o produto dos elementos da diagonal principal e o produto dos elementos 
+da diagonal secundária.
+DET. DE MATRIZ 3 x 3: Neste caso, o determinante será calculado com o auxílio da Regra de Sarrus. Esta consiste em copiar as 2 primeiras colunas da matriz à direita da 3ª coluna, de modo que 
+sejam obtida uma sequência de 5 colunas, somar os produtos das diagonais principais e subtrair os produtos das diagonais secundárias gerando o determinante da matriz. </value>
+  </data>
+  <data name="AjudaOposta.Text" xml:space="preserve">
+    <value>MATRIZ OPOSTA →
+O oposto de um número é o seu simétrico, ou seja, o oposto de 5 é -5, o posto de -2 é 2. Nesse mesmo sentido encontraremos o oposto de uma matriz. 
+Dada uma matriz B = (bij) m x n, a sua matriz oposta será representada por –B. Isso significa que para encontrar o oposto de uma matriz basta tornar 
+todos os elementos da matriz em seus opostos.</value>
+  </data>
+  <data name="AjudaTranspo.Text" xml:space="preserve">
+    <value>MATRIZ TRANSPOSTA → 
+Dada uma matriz A de ordem m x n, a matriz transposta dela será representada por At de ordem “invertida” n x m. Essa ordem invertida significa 
+que para transformarmos uma matriz em matriz transposta, basta trocar os elementos das linhas pelo das colunas e vice-versa. Ou seja, os elementos da coluna 1 de A serão 
+os elementos da linha 1 de At, os da linha 1 de A serão os da coluna 1 de At, assim por diante até toda matriz A ser transposta resultando na At.</value>
+  </data>
+  <data name="AjudaMatrizEscalar.Text" xml:space="preserve">
+    <value>MULTIPLICAÇÃO POR ESCALAR → 
+Dada uma matriz A = (aij)m x n, e um número real k, temos que k.A é uma matriz B = (bij)m x n, tal que bij = k.aij.
+Em termos gerais, temos: k.A = (k.aij) m x n em que 1 ≤ i ≤ m e 1 ≤ j ≤ n.</value>
+  </data>
+  <data name="AjudaProdMatrizes.Text" xml:space="preserve">
+    <value>MULTIPLICAÇÃO ENTRE MATRIZES → 
+O produto das matrizes A = ( aij) m x p e B = ( bij) p x n é a matriz C = (cij) m x n em que cada elemento cij é obtido por meio da soma dos produtos dos elementos correspondentes 
+da i-ésima linha de A pelos elementos da j-ésima coluna B. Vale salientar que a multiplicação entre matrizes só poderá ocorrer quando o número de linhas de uma for igual ao 
+número de colunas.</value>
+  </data>
+  <data name="SubAjuda.Text" xml:space="preserve">
+    <value>SUBTRAÇÃO → 
+Dadas duas  matrizes  A = (aij) e  B = (bij) de ordem m x n, A + B resultará em uma matriz R com m linhas e n colunas, obtida por:  rij = aij - bij.
+Ou seja, para que duas matrizes A e B possam ser subtraidas, ambas têm que ter a mesma ordem e neste caso, subtraimos os respectivos elementos
+de cada matriz que ocupam a mesma posição.
+</value>
+  </data>
+  <data name="SomaAjuda.Text" xml:space="preserve">
+    <value>SOMA → 
+Dadas duas  matrizes  A = (aij) e  B = (bij) de ordem m x n, A + B resultará em uma matriz S com m linhas e n colunas, obtida por:  sij = aij + bij. 
+Ou seja, para que duas matrizes A e B possam ser somadas, se ambas têm que ter a mesma ordem e neste caso, somamos os respectivos elementos 
+de cada matriz que ocupam a mesma posição.</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>14, 15</value>
   </metadata>
@@ -302,11 +347,6 @@
   <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>305, 15</value>
   </metadata>
-  <data name="SomaAjuda.Text" xml:space="preserve">
-    <value>SOMA → 
-Dadas duas  matrizes  A = (aij) e  B = (bij) de ordem m x n, A + B resultará em uma matriz S com m linhas e n colunas, obtida por:  sij = aij + bij. 
-Ou seja, para que duas matrizes A e B possam ser somadas, se ambas têm que ter a mesma ordem e neste caso, somamos os respectivos elementos de cada matriz que ocupam a mesma posição.</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABMLAAATCwAAAAAAAAAA

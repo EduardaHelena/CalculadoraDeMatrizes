@@ -74,11 +74,17 @@
             this.LimparA = new System.Windows.Forms.Button();
             this.Plano = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.SomaAjuda = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.SomaAjuda = new System.Windows.Forms.Label();
+            this.SubAjuda = new System.Windows.Forms.Label();
+            this.AjudaProdMatrizes = new System.Windows.Forms.Label();
+            this.AjudaMatrizEscalar = new System.Windows.Forms.Label();
+            this.AjudaTranspo = new System.Windows.Forms.Label();
+            this.AjudaOposta = new System.Windows.Forms.Label();
+            this.AjudaDet1ao3 = new System.Windows.Forms.Label();
             this.PlanoCartesiano.SuspendLayout();
             this.NLinhas2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuEscalar3)).BeginInit();
@@ -706,7 +712,14 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.tabPage1.Controls.Add(this.AjudaDet1ao3);
+            this.tabPage1.Controls.Add(this.AjudaOposta);
+            this.tabPage1.Controls.Add(this.AjudaTranspo);
+            this.tabPage1.Controls.Add(this.AjudaMatrizEscalar);
+            this.tabPage1.Controls.Add(this.AjudaProdMatrizes);
+            this.tabPage1.Controls.Add(this.SubAjuda);
             this.tabPage1.Controls.Add(this.SomaAjuda);
+            this.tabPage1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1419, 649);
@@ -718,13 +731,77 @@
             this.SomaAjuda.AutoSize = true;
             this.SomaAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.SomaAjuda.ForeColor = System.Drawing.Color.Teal;
-            this.SomaAjuda.Location = new System.Drawing.Point(8, 13);
+            this.SomaAjuda.Location = new System.Drawing.Point(8, 5);
             this.SomaAjuda.MaximumSize = new System.Drawing.Size(0, 100);
             this.SomaAjuda.Name = "SomaAjuda";
-            this.SomaAjuda.Size = new System.Drawing.Size(1349, 57);
+            this.SomaAjuda.Size = new System.Drawing.Size(1049, 76);
             this.SomaAjuda.TabIndex = 0;
             this.SomaAjuda.Text = resources.GetString("SomaAjuda.Text");
             this.SomaAjuda.UseWaitCursor = true;
+            // 
+            // SubAjuda
+            // 
+            this.SubAjuda.AutoSize = true;
+            this.SubAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.SubAjuda.ForeColor = System.Drawing.Color.Teal;
+            this.SubAjuda.Location = new System.Drawing.Point(8, 85);
+            this.SubAjuda.Name = "SubAjuda";
+            this.SubAjuda.Size = new System.Drawing.Size(1043, 76);
+            this.SubAjuda.TabIndex = 1;
+            this.SubAjuda.Text = resources.GetString("SubAjuda.Text");
+            // 
+            // AjudaProdMatrizes
+            // 
+            this.AjudaProdMatrizes.AutoSize = true;
+            this.AjudaProdMatrizes.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AjudaProdMatrizes.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaProdMatrizes.Location = new System.Drawing.Point(7, 163);
+            this.AjudaProdMatrizes.Name = "AjudaProdMatrizes";
+            this.AjudaProdMatrizes.Size = new System.Drawing.Size(1273, 76);
+            this.AjudaProdMatrizes.TabIndex = 2;
+            this.AjudaProdMatrizes.Text = resources.GetString("AjudaProdMatrizes.Text");
+            // 
+            // AjudaMatrizEscalar
+            // 
+            this.AjudaMatrizEscalar.AutoSize = true;
+            this.AjudaMatrizEscalar.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AjudaMatrizEscalar.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaMatrizEscalar.Location = new System.Drawing.Point(8, 242);
+            this.AjudaMatrizEscalar.Name = "AjudaMatrizEscalar";
+            this.AjudaMatrizEscalar.Size = new System.Drawing.Size(824, 57);
+            this.AjudaMatrizEscalar.TabIndex = 3;
+            this.AjudaMatrizEscalar.Text = resources.GetString("AjudaMatrizEscalar.Text");
+            // 
+            // AjudaTranspo
+            // 
+            this.AjudaTranspo.AutoSize = true;
+            this.AjudaTranspo.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AjudaTranspo.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaTranspo.Location = new System.Drawing.Point(8, 305);
+            this.AjudaTranspo.Name = "AjudaTranspo";
+            this.AjudaTranspo.Size = new System.Drawing.Size(1223, 76);
+            this.AjudaTranspo.TabIndex = 4;
+            this.AjudaTranspo.Text = resources.GetString("AjudaTranspo.Text");
+            // 
+            // AjudaOposta
+            // 
+            this.AjudaOposta.AutoSize = true;
+            this.AjudaOposta.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaOposta.Location = new System.Drawing.Point(7, 388);
+            this.AjudaOposta.Name = "AjudaOposta";
+            this.AjudaOposta.Size = new System.Drawing.Size(1067, 76);
+            this.AjudaOposta.TabIndex = 5;
+            this.AjudaOposta.Text = resources.GetString("AjudaOposta.Text");
+            // 
+            // AjudaDet1ao3
+            // 
+            this.AjudaDet1ao3.AutoSize = true;
+            this.AjudaDet1ao3.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaDet1ao3.Location = new System.Drawing.Point(8, 469);
+            this.AjudaDet1ao3.Name = "AjudaDet1ao3";
+            this.AjudaDet1ao3.Size = new System.Drawing.Size(1380, 133);
+            this.AjudaDet1ao3.TabIndex = 6;
+            this.AjudaDet1ao3.Text = resources.GetString("AjudaDet1ao3.Text");
             // 
             // Calculadora
             // 
@@ -816,6 +893,12 @@
         private System.Windows.Forms.Button MultiEscalar3;
         private System.Windows.Forms.NumericUpDown NuEscalar3;
         private System.Windows.Forms.Label SomaAjuda;
+        private System.Windows.Forms.Label SubAjuda;
+        private System.Windows.Forms.Label AjudaMatrizEscalar;
+        private System.Windows.Forms.Label AjudaProdMatrizes;
+        private System.Windows.Forms.Label AjudaDet1ao3;
+        private System.Windows.Forms.Label AjudaOposta;
+        private System.Windows.Forms.Label AjudaTranspo;
 
     }
 }

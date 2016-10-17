@@ -81,3 +81,13 @@ C:\Users\hugo.silva\Downloads\CERTO\CalculadoraMatrizes\CalculadoraMatrizes-mast
 C:\Users\hugo.silva\Downloads\CERTO\CalculadoraMatrizes\CalculadoraMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache
 C:\Users\hugo.silva\Downloads\CERTO\CalculadoraMatrizes\CalculadoraMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
 C:\Users\hugo.silva\Downloads\CERTO\CalculadoraMatrizes\CalculadoraMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe.config
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csprojResolveAssemblyReference.cache
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Calculadora.resources
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.FormMain.resources
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Properties.Resources.resources
+C:\Users\hugo.silva\Desktop\GitHub\CalculadoraDeMatrizes\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache

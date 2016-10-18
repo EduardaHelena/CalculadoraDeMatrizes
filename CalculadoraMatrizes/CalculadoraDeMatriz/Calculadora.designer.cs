@@ -166,7 +166,7 @@
             this.gerarForma.Text = "Gerar Forma";
             this.toolTip4.SetToolTip(this.gerarForma, "Gerara forma da matriz");
             this.gerarForma.UseVisualStyleBackColor = false;
-            this.gerarForma.Click += new System.EventHandler(this.button1_Click);
+            //this.gerarForma.Click += new System.EventHandler(this.button1_Click);
             // 
             // gerarMatrizGeoBt
             // 
@@ -180,7 +180,7 @@
             this.gerarMatrizGeoBt.Text = "Gerar Matriz";
             this.toolTip4.SetToolTip(this.gerarMatrizGeoBt, "Gera a matriz");
             this.gerarMatrizGeoBt.UseVisualStyleBackColor = false;
-            this.gerarMatrizGeoBt.Click += new System.EventHandler(this.gerarMatrizGeoBt_Click);
+            //this.gerarMatrizGeoBt.Click += new System.EventHandler(this.gerarMatrizGeoBt_Click);
             // 
             // escalarbox
             // 
@@ -238,7 +238,7 @@
             this.escalar.Text = "Escalar";
             this.toolTip4.SetToolTip(this.escalar, "Escalar forma de acordo com o numero entrado pelo usuario");
             this.escalar.UseVisualStyleBackColor = false;
-            this.escalar.Click += new System.EventHandler(this.escalar_Click);
+            //this.escalar.Click += new System.EventHandler(this.escalar_Click);
             // 
             // translacaoy
             // 
@@ -252,7 +252,7 @@
             this.translacaoy.Text = "Translação em Y";
             this.toolTip4.SetToolTip(this.translacaoy, "Transladar forma em Y de acordo com o numero entrado pelo usuario\r\n");
             this.translacaoy.UseVisualStyleBackColor = false;
-            this.translacaoy.Click += new System.EventHandler(this.translacaoy_Click);
+            //this.translacaoy.Click += new System.EventHandler(this.translacaoy_Click);
             // 
             // translacaox
             // 
@@ -266,7 +266,7 @@
             this.translacaox.Text = "Translação em X";
             this.toolTip4.SetToolTip(this.translacaox, "Transladar forma em X de acordo com o numero entrado pelo usuario\r\n");
             this.translacaox.UseVisualStyleBackColor = false;
-            this.translacaox.Click += new System.EventHandler(this.translacaox_Click);
+            //this.translacaox.Click += new System.EventHandler(this.translacaox_Click);
             // 
             // Rotatebt
             // 
@@ -280,7 +280,7 @@
             this.Rotatebt.Text = "Rotacionar em º ";
             this.toolTip4.SetToolTip(this.Rotatebt, "Rotacionar forma em um angulo entrado pelo usuario");
             this.Rotatebt.UseVisualStyleBackColor = false;
-            this.Rotatebt.Click += new System.EventHandler(this.Rotatebt_Click);
+            //this.Rotatebt.Click += new System.EventHandler(this.Rotatebt_Click);
             // 
             // simetriay
             // 
@@ -294,7 +294,7 @@
             this.simetriay.Text = "Simetria y";
             this.toolTip4.SetToolTip(this.simetriay, "Gerar forma simétrica em Y");
             this.simetriay.UseVisualStyleBackColor = false;
-            this.simetriay.Click += new System.EventHandler(this.simetriay_Click);
+            //this.simetriay.Click += new System.EventHandler(this.simetriay_Click);
             // 
             // simetriax
             // 
@@ -308,7 +308,7 @@
             this.simetriax.Text = "Simetria x";
             this.toolTip4.SetToolTip(this.simetriax, "Gerar forma simétrica em x");
             this.simetriax.UseVisualStyleBackColor = false;
-            this.simetriax.Click += new System.EventHandler(this.simetriax_Click);
+            //this.simetriax.Click += new System.EventHandler(this.simetriax_Click);
             // 
             // label4
             // 

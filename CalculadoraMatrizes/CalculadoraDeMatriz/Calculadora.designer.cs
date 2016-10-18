@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
-            this.PlanoCartesiano = new System.Windows.Forms.TabPage();
+            this.Plano_Cartesiano = new System.Windows.Forms.TabPage();
             this.gerarForma = new System.Windows.Forms.Button();
             this.gerarMatrizGeoBt = new System.Windows.Forms.Button();
             this.escalarbox = new System.Windows.Forms.TextBox();
@@ -106,7 +111,8 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.PlanoCartesiano.SuspendLayout();
+            this.LimparMatrizG = new System.Windows.Forms.Button();
+            this.Plano_Cartesiano.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColunasGeo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LinhasGeo)).BeginInit();
@@ -126,33 +132,34 @@
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PlanoCartesiano
+            // Plano_Cartesiano
             // 
-            this.PlanoCartesiano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.PlanoCartesiano.Controls.Add(this.gerarForma);
-            this.PlanoCartesiano.Controls.Add(this.gerarMatrizGeoBt);
-            this.PlanoCartesiano.Controls.Add(this.escalarbox);
-            this.PlanoCartesiano.Controls.Add(this.translaçaoybox);
-            this.PlanoCartesiano.Controls.Add(this.translaçãoxbox);
-            this.PlanoCartesiano.Controls.Add(this.rotacionarbox);
-            this.PlanoCartesiano.Controls.Add(this.escalar);
-            this.PlanoCartesiano.Controls.Add(this.translacaoy);
-            this.PlanoCartesiano.Controls.Add(this.translacaox);
-            this.PlanoCartesiano.Controls.Add(this.Rotatebt);
-            this.PlanoCartesiano.Controls.Add(this.simetriay);
-            this.PlanoCartesiano.Controls.Add(this.simetriax);
-            this.PlanoCartesiano.Controls.Add(this.label4);
-            this.PlanoCartesiano.Controls.Add(this.label3);
-            this.PlanoCartesiano.Controls.Add(this.groupBox4);
-            this.PlanoCartesiano.Controls.Add(this.ColunasGeo);
-            this.PlanoCartesiano.Controls.Add(this.LinhasGeo);
-            this.PlanoCartesiano.Controls.Add(this.grafico);
-            this.PlanoCartesiano.Location = new System.Drawing.Point(4, 25);
-            this.PlanoCartesiano.Name = "PlanoCartesiano";
-            this.PlanoCartesiano.Padding = new System.Windows.Forms.Padding(3);
-            this.PlanoCartesiano.Size = new System.Drawing.Size(1419, 649);
-            this.PlanoCartesiano.TabIndex = 1;
-            this.PlanoCartesiano.Text = "Plano Cartesiano";
+            this.Plano_Cartesiano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.Plano_Cartesiano.Controls.Add(this.LimparMatrizG);
+            this.Plano_Cartesiano.Controls.Add(this.gerarForma);
+            this.Plano_Cartesiano.Controls.Add(this.gerarMatrizGeoBt);
+            this.Plano_Cartesiano.Controls.Add(this.escalarbox);
+            this.Plano_Cartesiano.Controls.Add(this.translaçaoybox);
+            this.Plano_Cartesiano.Controls.Add(this.translaçãoxbox);
+            this.Plano_Cartesiano.Controls.Add(this.rotacionarbox);
+            this.Plano_Cartesiano.Controls.Add(this.escalar);
+            this.Plano_Cartesiano.Controls.Add(this.translacaoy);
+            this.Plano_Cartesiano.Controls.Add(this.translacaox);
+            this.Plano_Cartesiano.Controls.Add(this.Rotatebt);
+            this.Plano_Cartesiano.Controls.Add(this.simetriay);
+            this.Plano_Cartesiano.Controls.Add(this.simetriax);
+            this.Plano_Cartesiano.Controls.Add(this.label4);
+            this.Plano_Cartesiano.Controls.Add(this.label3);
+            this.Plano_Cartesiano.Controls.Add(this.groupBox4);
+            this.Plano_Cartesiano.Controls.Add(this.ColunasGeo);
+            this.Plano_Cartesiano.Controls.Add(this.LinhasGeo);
+            this.Plano_Cartesiano.Controls.Add(this.grafico);
+            this.Plano_Cartesiano.Location = new System.Drawing.Point(4, 25);
+            this.Plano_Cartesiano.Name = "Plano_Cartesiano";
+            this.Plano_Cartesiano.Padding = new System.Windows.Forms.Padding(3);
+            this.Plano_Cartesiano.Size = new System.Drawing.Size(1419, 649);
+            this.Plano_Cartesiano.TabIndex = 1;
+            this.Plano_Cartesiano.Text = "Plano Cartesiano";
             // 
             // gerarForma
             // 
@@ -166,7 +173,7 @@
             this.gerarForma.Text = "Gerar Forma";
             this.toolTip4.SetToolTip(this.gerarForma, "Gerara forma da matriz");
             this.gerarForma.UseVisualStyleBackColor = false;
-            //this.gerarForma.Click += new System.EventHandler(this.button1_Click);
+            this.gerarForma.Click += new System.EventHandler(this.button1_Click);
             // 
             // gerarMatrizGeoBt
             // 
@@ -180,7 +187,7 @@
             this.gerarMatrizGeoBt.Text = "Gerar Matriz";
             this.toolTip4.SetToolTip(this.gerarMatrizGeoBt, "Gera a matriz");
             this.gerarMatrizGeoBt.UseVisualStyleBackColor = false;
-            //this.gerarMatrizGeoBt.Click += new System.EventHandler(this.gerarMatrizGeoBt_Click);
+            this.gerarMatrizGeoBt.Click += new System.EventHandler(this.gerarMatrizGeoBt_Click);
             // 
             // escalarbox
             // 
@@ -238,7 +245,7 @@
             this.escalar.Text = "Escalar";
             this.toolTip4.SetToolTip(this.escalar, "Escalar forma de acordo com o numero entrado pelo usuario");
             this.escalar.UseVisualStyleBackColor = false;
-            //this.escalar.Click += new System.EventHandler(this.escalar_Click);
+            this.escalar.Click += new System.EventHandler(this.escalar_Click);
             // 
             // translacaoy
             // 
@@ -252,7 +259,7 @@
             this.translacaoy.Text = "Translação em Y";
             this.toolTip4.SetToolTip(this.translacaoy, "Transladar forma em Y de acordo com o numero entrado pelo usuario\r\n");
             this.translacaoy.UseVisualStyleBackColor = false;
-            //this.translacaoy.Click += new System.EventHandler(this.translacaoy_Click);
+            this.translacaoy.Click += new System.EventHandler(this.translacaoy_Click);
             // 
             // translacaox
             // 
@@ -266,7 +273,7 @@
             this.translacaox.Text = "Translação em X";
             this.toolTip4.SetToolTip(this.translacaox, "Transladar forma em X de acordo com o numero entrado pelo usuario\r\n");
             this.translacaox.UseVisualStyleBackColor = false;
-            //this.translacaox.Click += new System.EventHandler(this.translacaox_Click);
+            this.translacaox.Click += new System.EventHandler(this.translacaox_Click);
             // 
             // Rotatebt
             // 
@@ -280,7 +287,7 @@
             this.Rotatebt.Text = "Rotacionar em º ";
             this.toolTip4.SetToolTip(this.Rotatebt, "Rotacionar forma em um angulo entrado pelo usuario");
             this.Rotatebt.UseVisualStyleBackColor = false;
-            //this.Rotatebt.Click += new System.EventHandler(this.Rotatebt_Click);
+            this.Rotatebt.Click += new System.EventHandler(this.Rotatebt_Click);
             // 
             // simetriay
             // 
@@ -294,7 +301,7 @@
             this.simetriay.Text = "Simetria y";
             this.toolTip4.SetToolTip(this.simetriay, "Gerar forma simétrica em Y");
             this.simetriay.UseVisualStyleBackColor = false;
-            //this.simetriay.Click += new System.EventHandler(this.simetriay_Click);
+            this.simetriay.Click += new System.EventHandler(this.simetriay_Click);
             // 
             // simetriax
             // 
@@ -308,7 +315,7 @@
             this.simetriax.Text = "Simetria x";
             this.toolTip4.SetToolTip(this.simetriax, "Gerar forma simétrica em x");
             this.simetriax.UseVisualStyleBackColor = false;
-            //this.simetriax.Click += new System.EventHandler(this.simetriax_Click);
+            this.simetriax.Click += new System.EventHandler(this.simetriax_Click);
             // 
             // label4
             // 
@@ -398,23 +405,29 @@
             // 
             this.grafico.BackColor = System.Drawing.Color.Teal;
             this.grafico.BorderlineColor = System.Drawing.Color.Teal;
-            chartArea6.Name = "ChartArea1";
-            this.grafico.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.grafico.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.grafico.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.grafico.Legends.Add(legend1);
             this.grafico.Location = new System.Drawing.Point(320, 148);
             this.grafico.Name = "grafico";
             this.grafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series11.Legend = "Legend1";
-            series11.Name = "Cartesiano";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Legend = "Legend1";
-            series12.Name = "Matiz";
-            this.grafico.Series.Add(series11);
-            this.grafico.Series.Add(series12);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Matriz";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Eixos";
+            series2.Points.Add(dataPoint1);
+            series2.Points.Add(dataPoint2);
+            series2.Points.Add(dataPoint3);
+            series2.Points.Add(dataPoint4);
+            series2.Points.Add(dataPoint5);
+            this.grafico.Series.Add(series1);
+            this.grafico.Series.Add(series2);
             this.grafico.Size = new System.Drawing.Size(960, 453);
             this.grafico.TabIndex = 0;
             this.grafico.Text = "chart1";
@@ -983,7 +996,7 @@
             // Plano
             // 
             this.Plano.Controls.Add(this.NLinhas2);
-            this.Plano.Controls.Add(this.PlanoCartesiano);
+            this.Plano.Controls.Add(this.Plano_Cartesiano);
             this.Plano.Controls.Add(this.tabPage1);
             this.Plano.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Plano.Location = new System.Drawing.Point(0, 12);
@@ -1086,6 +1099,21 @@
             this.SomaAjuda.Text = resources.GetString("SomaAjuda.Text");
             this.SomaAjuda.UseWaitCursor = true;
             // 
+            // LimparMatrizG
+            // 
+            this.LimparMatrizG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.LimparMatrizG.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LimparMatrizG.ForeColor = System.Drawing.Color.Teal;
+            this.LimparMatrizG.Location = new System.Drawing.Point(177, 104);
+            this.LimparMatrizG.Name = "LimparMatrizG";
+            this.LimparMatrizG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LimparMatrizG.Size = new System.Drawing.Size(114, 27);
+            this.LimparMatrizG.TabIndex = 36;
+            this.LimparMatrizG.Text = "Limpar";
+            this.toolTip1.SetToolTip(this.LimparMatrizG, "Limpa a Matriz 1");
+            this.LimparMatrizG.UseVisualStyleBackColor = false;
+            this.LimparMatrizG.Click += new System.EventHandler(this.LimparMatrizG_Click);
+            // 
             // Calculadora
             // 
             this.AccessibleName = "Calculadora";
@@ -1101,8 +1129,8 @@
             this.Text = "Calculadora de Matrizes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sair);
             this.Load += new System.EventHandler(this.Calculadora_Load);
-            this.PlanoCartesiano.ResumeLayout(false);
-            this.PlanoCartesiano.PerformLayout();
+            this.Plano_Cartesiano.ResumeLayout(false);
+            this.Plano_Cartesiano.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColunasGeo)).EndInit();
@@ -1132,7 +1160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabPage PlanoCartesiano;
+        private System.Windows.Forms.TabPage Plano_Cartesiano;
         private System.Windows.Forms.TabPage NLinhas2;
         private System.Windows.Forms.Button Gerar2;
         private System.Windows.Forms.Button Gerar;
@@ -1204,6 +1232,7 @@
         private System.Windows.Forms.TextBox rotacionarbox;
         private System.Windows.Forms.Button gerarForma;
         private System.Windows.Forms.Button gerarMatrizGeoBt;
+        private System.Windows.Forms.Button LimparMatrizG;
 
     }
 }

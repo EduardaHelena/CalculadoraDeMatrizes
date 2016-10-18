@@ -29,10 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.PlanoCartesiano = new System.Windows.Forms.TabPage();
+            this.gerarForma = new System.Windows.Forms.Button();
+            this.gerarMatrizGeoBt = new System.Windows.Forms.Button();
+            this.escalarbox = new System.Windows.Forms.TextBox();
+            this.translaçaoybox = new System.Windows.Forms.TextBox();
+            this.translaçãoxbox = new System.Windows.Forms.TextBox();
+            this.rotacionarbox = new System.Windows.Forms.TextBox();
+            this.escalar = new System.Windows.Forms.Button();
+            this.translacaoy = new System.Windows.Forms.Button();
+            this.translacaox = new System.Windows.Forms.Button();
+            this.Rotatebt = new System.Windows.Forms.Button();
+            this.simetriay = new System.Windows.Forms.Button();
+            this.simetriax = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ColunasGeo = new System.Windows.Forms.NumericUpDown();
+            this.LinhasGeo = new System.Windows.Forms.NumericUpDown();
+            this.grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.NLinhas2 = new System.Windows.Forms.TabPage();
             this.NuEscalar3 = new System.Windows.Forms.NumericUpDown();
             this.MultiEscalar3 = new System.Windows.Forms.Button();
@@ -74,18 +95,22 @@
             this.LimparA = new System.Windows.Forms.Button();
             this.Plano = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.AjudaDet1ao3 = new System.Windows.Forms.Label();
+            this.AjudaOposta = new System.Windows.Forms.Label();
+            this.AjudaTranspo = new System.Windows.Forms.Label();
+            this.AjudaMatrizEscalar = new System.Windows.Forms.Label();
+            this.AjudaProdMatrizes = new System.Windows.Forms.Label();
+            this.SubAjuda = new System.Windows.Forms.Label();
             this.SomaAjuda = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.SubAjuda = new System.Windows.Forms.Label();
-            this.AjudaProdMatrizes = new System.Windows.Forms.Label();
-            this.AjudaMatrizEscalar = new System.Windows.Forms.Label();
-            this.AjudaTranspo = new System.Windows.Forms.Label();
-            this.AjudaOposta = new System.Windows.Forms.Label();
-            this.AjudaDet1ao3 = new System.Windows.Forms.Label();
             this.PlanoCartesiano.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColunasGeo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LinhasGeo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).BeginInit();
             this.NLinhas2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuEscalar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuEscalar2)).BeginInit();
@@ -104,8 +129,24 @@
             // PlanoCartesiano
             // 
             this.PlanoCartesiano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.PlanoCartesiano.Controls.Add(this.gerarForma);
+            this.PlanoCartesiano.Controls.Add(this.gerarMatrizGeoBt);
+            this.PlanoCartesiano.Controls.Add(this.escalarbox);
+            this.PlanoCartesiano.Controls.Add(this.translaçaoybox);
+            this.PlanoCartesiano.Controls.Add(this.translaçãoxbox);
+            this.PlanoCartesiano.Controls.Add(this.rotacionarbox);
+            this.PlanoCartesiano.Controls.Add(this.escalar);
+            this.PlanoCartesiano.Controls.Add(this.translacaoy);
+            this.PlanoCartesiano.Controls.Add(this.translacaox);
+            this.PlanoCartesiano.Controls.Add(this.Rotatebt);
+            this.PlanoCartesiano.Controls.Add(this.simetriay);
+            this.PlanoCartesiano.Controls.Add(this.simetriax);
             this.PlanoCartesiano.Controls.Add(this.label4);
             this.PlanoCartesiano.Controls.Add(this.label3);
+            this.PlanoCartesiano.Controls.Add(this.groupBox4);
+            this.PlanoCartesiano.Controls.Add(this.ColunasGeo);
+            this.PlanoCartesiano.Controls.Add(this.LinhasGeo);
+            this.PlanoCartesiano.Controls.Add(this.grafico);
             this.PlanoCartesiano.Location = new System.Drawing.Point(4, 25);
             this.PlanoCartesiano.Name = "PlanoCartesiano";
             this.PlanoCartesiano.Padding = new System.Windows.Forms.Padding(3);
@@ -113,27 +154,270 @@
             this.PlanoCartesiano.TabIndex = 1;
             this.PlanoCartesiano.Text = "Plano Cartesiano";
             // 
+            // gerarForma
+            // 
+            this.gerarForma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.gerarForma.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gerarForma.ForeColor = System.Drawing.Color.Teal;
+            this.gerarForma.Location = new System.Drawing.Point(459, 102);
+            this.gerarForma.Name = "gerarForma";
+            this.gerarForma.Size = new System.Drawing.Size(114, 28);
+            this.gerarForma.TabIndex = 35;
+            this.gerarForma.Text = "Gerar Forma";
+            this.toolTip4.SetToolTip(this.gerarForma, "Gerara forma da matriz");
+            this.gerarForma.UseVisualStyleBackColor = false;
+            this.gerarForma.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gerarMatrizGeoBt
+            // 
+            this.gerarMatrizGeoBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.gerarMatrizGeoBt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gerarMatrizGeoBt.ForeColor = System.Drawing.Color.Teal;
+            this.gerarMatrizGeoBt.Location = new System.Drawing.Point(320, 103);
+            this.gerarMatrizGeoBt.Name = "gerarMatrizGeoBt";
+            this.gerarMatrizGeoBt.Size = new System.Drawing.Size(114, 28);
+            this.gerarMatrizGeoBt.TabIndex = 34;
+            this.gerarMatrizGeoBt.Text = "Gerar Matriz";
+            this.toolTip4.SetToolTip(this.gerarMatrizGeoBt, "Gera a matriz");
+            this.gerarMatrizGeoBt.UseVisualStyleBackColor = false;
+            this.gerarMatrizGeoBt.Click += new System.EventHandler(this.gerarMatrizGeoBt_Click);
+            // 
+            // escalarbox
+            // 
+            this.escalarbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.escalarbox.ForeColor = System.Drawing.Color.Teal;
+            this.escalarbox.Location = new System.Drawing.Point(177, 456);
+            this.escalarbox.Name = "escalarbox";
+            this.escalarbox.Size = new System.Drawing.Size(100, 24);
+            this.escalarbox.TabIndex = 33;
+            this.escalarbox.Text = "0";
+            this.toolTip1.SetToolTip(this.escalarbox, "Número entrado pelo usuario");
+            // 
+            // translaçaoybox
+            // 
+            this.translaçaoybox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.translaçaoybox.ForeColor = System.Drawing.Color.Teal;
+            this.translaçaoybox.Location = new System.Drawing.Point(177, 419);
+            this.translaçaoybox.Name = "translaçaoybox";
+            this.translaçaoybox.Size = new System.Drawing.Size(100, 24);
+            this.translaçaoybox.TabIndex = 32;
+            this.translaçaoybox.Text = "0";
+            this.toolTip1.SetToolTip(this.translaçaoybox, "Número entrado pelo usuario");
+            // 
+            // translaçãoxbox
+            // 
+            this.translaçãoxbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.translaçãoxbox.ForeColor = System.Drawing.Color.Teal;
+            this.translaçãoxbox.Location = new System.Drawing.Point(177, 387);
+            this.translaçãoxbox.Name = "translaçãoxbox";
+            this.translaçãoxbox.Size = new System.Drawing.Size(100, 24);
+            this.translaçãoxbox.TabIndex = 31;
+            this.translaçãoxbox.Text = "0";
+            this.toolTip1.SetToolTip(this.translaçãoxbox, "Número entrado pelo usuario");
+            // 
+            // rotacionarbox
+            // 
+            this.rotacionarbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.rotacionarbox.ForeColor = System.Drawing.Color.Teal;
+            this.rotacionarbox.Location = new System.Drawing.Point(177, 354);
+            this.rotacionarbox.Name = "rotacionarbox";
+            this.rotacionarbox.Size = new System.Drawing.Size(100, 24);
+            this.rotacionarbox.TabIndex = 30;
+            this.rotacionarbox.Text = "0";
+            this.toolTip1.SetToolTip(this.rotacionarbox, "Número entrado pelo usuario");
+            // 
+            // escalar
+            // 
+            this.escalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.escalar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.escalar.ForeColor = System.Drawing.Color.Teal;
+            this.escalar.Location = new System.Drawing.Point(46, 453);
+            this.escalar.Name = "escalar";
+            this.escalar.Size = new System.Drawing.Size(114, 28);
+            this.escalar.TabIndex = 29;
+            this.escalar.Text = "Escalar";
+            this.toolTip4.SetToolTip(this.escalar, "Escalar forma de acordo com o numero entrado pelo usuario");
+            this.escalar.UseVisualStyleBackColor = false;
+            this.escalar.Click += new System.EventHandler(this.escalar_Click);
+            // 
+            // translacaoy
+            // 
+            this.translacaoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.translacaoy.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.translacaoy.ForeColor = System.Drawing.Color.Teal;
+            this.translacaoy.Location = new System.Drawing.Point(46, 419);
+            this.translacaoy.Name = "translacaoy";
+            this.translacaoy.Size = new System.Drawing.Size(114, 28);
+            this.translacaoy.TabIndex = 28;
+            this.translacaoy.Text = "Translação em Y";
+            this.toolTip4.SetToolTip(this.translacaoy, "Transladar forma em Y de acordo com o numero entrado pelo usuario\r\n");
+            this.translacaoy.UseVisualStyleBackColor = false;
+            this.translacaoy.Click += new System.EventHandler(this.translacaoy_Click);
+            // 
+            // translacaox
+            // 
+            this.translacaox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.translacaox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.translacaox.ForeColor = System.Drawing.Color.Teal;
+            this.translacaox.Location = new System.Drawing.Point(46, 385);
+            this.translacaox.Name = "translacaox";
+            this.translacaox.Size = new System.Drawing.Size(114, 28);
+            this.translacaox.TabIndex = 27;
+            this.translacaox.Text = "Translação em X";
+            this.toolTip4.SetToolTip(this.translacaox, "Transladar forma em X de acordo com o numero entrado pelo usuario\r\n");
+            this.translacaox.UseVisualStyleBackColor = false;
+            this.translacaox.Click += new System.EventHandler(this.translacaox_Click);
+            // 
+            // Rotatebt
+            // 
+            this.Rotatebt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.Rotatebt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rotatebt.ForeColor = System.Drawing.Color.Teal;
+            this.Rotatebt.Location = new System.Drawing.Point(46, 351);
+            this.Rotatebt.Name = "Rotatebt";
+            this.Rotatebt.Size = new System.Drawing.Size(114, 28);
+            this.Rotatebt.TabIndex = 26;
+            this.Rotatebt.Text = "Rotacionar em º ";
+            this.toolTip4.SetToolTip(this.Rotatebt, "Rotacionar forma em um angulo entrado pelo usuario");
+            this.Rotatebt.UseVisualStyleBackColor = false;
+            this.Rotatebt.Click += new System.EventHandler(this.Rotatebt_Click);
+            // 
+            // simetriay
+            // 
+            this.simetriay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.simetriay.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simetriay.ForeColor = System.Drawing.Color.Teal;
+            this.simetriay.Location = new System.Drawing.Point(97, 287);
+            this.simetriay.Name = "simetriay";
+            this.simetriay.Size = new System.Drawing.Size(114, 28);
+            this.simetriay.TabIndex = 25;
+            this.simetriay.Text = "Simetria y";
+            this.toolTip4.SetToolTip(this.simetriay, "Gerar forma simétrica em Y");
+            this.simetriay.UseVisualStyleBackColor = false;
+            this.simetriay.Click += new System.EventHandler(this.simetriay_Click);
+            // 
+            // simetriax
+            // 
+            this.simetriax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.simetriax.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simetriax.ForeColor = System.Drawing.Color.Teal;
+            this.simetriax.Location = new System.Drawing.Point(97, 253);
+            this.simetriax.Name = "simetriax";
+            this.simetriax.Size = new System.Drawing.Size(114, 28);
+            this.simetriax.TabIndex = 24;
+            this.simetriax.Text = "Simetria x";
+            this.toolTip4.SetToolTip(this.simetriax, "Gerar forma simétrica em x");
+            this.simetriax.UseVisualStyleBackColor = false;
+            this.simetriax.Click += new System.EventHandler(this.simetriax_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(255, 337);
+            this.label4.Location = new System.Drawing.Point(324, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(842, 67);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Aguarde nossa próxima atualização";
+            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Colunas:";
+            this.toolTip1.SetToolTip(this.label4, "Quantidade de Pontos da sua forma");
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(540, 238);
+            this.label3.Location = new System.Drawing.Point(323, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 67);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Em breve!";
+            this.label3.Size = new System.Drawing.Size(122, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Linhas (x , y):";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.ForeColor = System.Drawing.Color.Teal;
+            this.groupBox4.Location = new System.Drawing.Point(594, 21);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(686, 100);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Matriz";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.textBox4.Location = new System.Drawing.Point(7, 24);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(673, 70);
+            this.textBox4.TabIndex = 0;
+            // 
+            // ColunasGeo
+            // 
+            this.ColunasGeo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.ColunasGeo.ForeColor = System.Drawing.Color.Teal;
+            this.ColunasGeo.Location = new System.Drawing.Point(457, 61);
+            this.ColunasGeo.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ColunasGeo.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.ColunasGeo.Name = "ColunasGeo";
+            this.ColunasGeo.Size = new System.Drawing.Size(120, 24);
+            this.ColunasGeo.TabIndex = 2;
+            this.ColunasGeo.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // LinhasGeo
+            // 
+            this.LinhasGeo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.LinhasGeo.Enabled = false;
+            this.LinhasGeo.ForeColor = System.Drawing.Color.Teal;
+            this.LinhasGeo.Location = new System.Drawing.Point(456, 20);
+            this.LinhasGeo.Name = "LinhasGeo";
+            this.LinhasGeo.Size = new System.Drawing.Size(120, 24);
+            this.LinhasGeo.TabIndex = 1;
+            this.LinhasGeo.TabStop = false;
+            this.toolTip1.SetToolTip(this.LinhasGeo, "Dimensão da forma");
+            this.LinhasGeo.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // grafico
+            // 
+            this.grafico.BackColor = System.Drawing.Color.Teal;
+            this.grafico.BorderlineColor = System.Drawing.Color.Teal;
+            chartArea6.Name = "ChartArea1";
+            this.grafico.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.grafico.Legends.Add(legend6);
+            this.grafico.Location = new System.Drawing.Point(320, 148);
+            this.grafico.Name = "grafico";
+            this.grafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Legend = "Legend1";
+            series11.Name = "Cartesiano";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.Name = "Matiz";
+            this.grafico.Series.Add(series11);
+            this.grafico.Series.Add(series12);
+            this.grafico.Size = new System.Drawing.Size(960, 453);
+            this.grafico.TabIndex = 0;
+            this.grafico.Text = "chart1";
             // 
             // NLinhas2
             // 
@@ -180,7 +464,6 @@
             this.NLinhas2.Size = new System.Drawing.Size(1419, 649);
             this.NLinhas2.TabIndex = 0;
             this.NLinhas2.Text = "Operações";
-            this.NLinhas2.Click += new System.EventHandler(this.NLinhas2_Click);
             // 
             // NuEscalar3
             // 
@@ -726,51 +1009,25 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Ajuda";
             // 
-            // SomaAjuda
+            // AjudaDet1ao3
             // 
-            this.SomaAjuda.AutoSize = true;
-            this.SomaAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.SomaAjuda.ForeColor = System.Drawing.Color.Teal;
-            this.SomaAjuda.Location = new System.Drawing.Point(8, 5);
-            this.SomaAjuda.MaximumSize = new System.Drawing.Size(0, 100);
-            this.SomaAjuda.Name = "SomaAjuda";
-            this.SomaAjuda.Size = new System.Drawing.Size(1049, 76);
-            this.SomaAjuda.TabIndex = 0;
-            this.SomaAjuda.Text = resources.GetString("SomaAjuda.Text");
-            this.SomaAjuda.UseWaitCursor = true;
+            this.AjudaDet1ao3.AutoSize = true;
+            this.AjudaDet1ao3.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaDet1ao3.Location = new System.Drawing.Point(8, 469);
+            this.AjudaDet1ao3.Name = "AjudaDet1ao3";
+            this.AjudaDet1ao3.Size = new System.Drawing.Size(1380, 133);
+            this.AjudaDet1ao3.TabIndex = 6;
+            this.AjudaDet1ao3.Text = resources.GetString("AjudaDet1ao3.Text");
             // 
-            // SubAjuda
+            // AjudaOposta
             // 
-            this.SubAjuda.AutoSize = true;
-            this.SubAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.SubAjuda.ForeColor = System.Drawing.Color.Teal;
-            this.SubAjuda.Location = new System.Drawing.Point(8, 85);
-            this.SubAjuda.Name = "SubAjuda";
-            this.SubAjuda.Size = new System.Drawing.Size(1043, 76);
-            this.SubAjuda.TabIndex = 1;
-            this.SubAjuda.Text = resources.GetString("SubAjuda.Text");
-            // 
-            // AjudaProdMatrizes
-            // 
-            this.AjudaProdMatrizes.AutoSize = true;
-            this.AjudaProdMatrizes.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.AjudaProdMatrizes.ForeColor = System.Drawing.Color.Teal;
-            this.AjudaProdMatrizes.Location = new System.Drawing.Point(7, 163);
-            this.AjudaProdMatrizes.Name = "AjudaProdMatrizes";
-            this.AjudaProdMatrizes.Size = new System.Drawing.Size(1273, 76);
-            this.AjudaProdMatrizes.TabIndex = 2;
-            this.AjudaProdMatrizes.Text = resources.GetString("AjudaProdMatrizes.Text");
-            // 
-            // AjudaMatrizEscalar
-            // 
-            this.AjudaMatrizEscalar.AutoSize = true;
-            this.AjudaMatrizEscalar.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.AjudaMatrizEscalar.ForeColor = System.Drawing.Color.Teal;
-            this.AjudaMatrizEscalar.Location = new System.Drawing.Point(8, 242);
-            this.AjudaMatrizEscalar.Name = "AjudaMatrizEscalar";
-            this.AjudaMatrizEscalar.Size = new System.Drawing.Size(824, 57);
-            this.AjudaMatrizEscalar.TabIndex = 3;
-            this.AjudaMatrizEscalar.Text = resources.GetString("AjudaMatrizEscalar.Text");
+            this.AjudaOposta.AutoSize = true;
+            this.AjudaOposta.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaOposta.Location = new System.Drawing.Point(7, 388);
+            this.AjudaOposta.Name = "AjudaOposta";
+            this.AjudaOposta.Size = new System.Drawing.Size(1067, 76);
+            this.AjudaOposta.TabIndex = 5;
+            this.AjudaOposta.Text = resources.GetString("AjudaOposta.Text");
             // 
             // AjudaTranspo
             // 
@@ -783,25 +1040,51 @@
             this.AjudaTranspo.TabIndex = 4;
             this.AjudaTranspo.Text = resources.GetString("AjudaTranspo.Text");
             // 
-            // AjudaOposta
+            // AjudaMatrizEscalar
             // 
-            this.AjudaOposta.AutoSize = true;
-            this.AjudaOposta.ForeColor = System.Drawing.Color.Teal;
-            this.AjudaOposta.Location = new System.Drawing.Point(7, 388);
-            this.AjudaOposta.Name = "AjudaOposta";
-            this.AjudaOposta.Size = new System.Drawing.Size(1067, 76);
-            this.AjudaOposta.TabIndex = 5;
-            this.AjudaOposta.Text = resources.GetString("AjudaOposta.Text");
+            this.AjudaMatrizEscalar.AutoSize = true;
+            this.AjudaMatrizEscalar.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AjudaMatrizEscalar.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaMatrizEscalar.Location = new System.Drawing.Point(8, 242);
+            this.AjudaMatrizEscalar.Name = "AjudaMatrizEscalar";
+            this.AjudaMatrizEscalar.Size = new System.Drawing.Size(824, 57);
+            this.AjudaMatrizEscalar.TabIndex = 3;
+            this.AjudaMatrizEscalar.Text = resources.GetString("AjudaMatrizEscalar.Text");
             // 
-            // AjudaDet1ao3
+            // AjudaProdMatrizes
             // 
-            this.AjudaDet1ao3.AutoSize = true;
-            this.AjudaDet1ao3.ForeColor = System.Drawing.Color.Teal;
-            this.AjudaDet1ao3.Location = new System.Drawing.Point(8, 469);
-            this.AjudaDet1ao3.Name = "AjudaDet1ao3";
-            this.AjudaDet1ao3.Size = new System.Drawing.Size(1380, 133);
-            this.AjudaDet1ao3.TabIndex = 6;
-            this.AjudaDet1ao3.Text = resources.GetString("AjudaDet1ao3.Text");
+            this.AjudaProdMatrizes.AutoSize = true;
+            this.AjudaProdMatrizes.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.AjudaProdMatrizes.ForeColor = System.Drawing.Color.Teal;
+            this.AjudaProdMatrizes.Location = new System.Drawing.Point(7, 163);
+            this.AjudaProdMatrizes.Name = "AjudaProdMatrizes";
+            this.AjudaProdMatrizes.Size = new System.Drawing.Size(1273, 76);
+            this.AjudaProdMatrizes.TabIndex = 2;
+            this.AjudaProdMatrizes.Text = resources.GetString("AjudaProdMatrizes.Text");
+            // 
+            // SubAjuda
+            // 
+            this.SubAjuda.AutoSize = true;
+            this.SubAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.SubAjuda.ForeColor = System.Drawing.Color.Teal;
+            this.SubAjuda.Location = new System.Drawing.Point(8, 85);
+            this.SubAjuda.Name = "SubAjuda";
+            this.SubAjuda.Size = new System.Drawing.Size(1043, 76);
+            this.SubAjuda.TabIndex = 1;
+            this.SubAjuda.Text = resources.GetString("SubAjuda.Text");
+            // 
+            // SomaAjuda
+            // 
+            this.SomaAjuda.AutoSize = true;
+            this.SomaAjuda.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.SomaAjuda.ForeColor = System.Drawing.Color.Teal;
+            this.SomaAjuda.Location = new System.Drawing.Point(8, 5);
+            this.SomaAjuda.MaximumSize = new System.Drawing.Size(0, 100);
+            this.SomaAjuda.Name = "SomaAjuda";
+            this.SomaAjuda.Size = new System.Drawing.Size(1049, 76);
+            this.SomaAjuda.TabIndex = 0;
+            this.SomaAjuda.Text = resources.GetString("SomaAjuda.Text");
+            this.SomaAjuda.UseWaitCursor = true;
             // 
             // Calculadora
             // 
@@ -820,6 +1103,11 @@
             this.Load += new System.EventHandler(this.Calculadora_Load);
             this.PlanoCartesiano.ResumeLayout(false);
             this.PlanoCartesiano.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColunasGeo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LinhasGeo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).EndInit();
             this.NLinhas2.ResumeLayout(false);
             this.NLinhas2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuEscalar3)).EndInit();
@@ -884,8 +1172,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button MultiEscalar1;
         private System.Windows.Forms.NumericUpDown NuEscalar1;
         private System.Windows.Forms.Button MultiEscalar2;
@@ -899,6 +1185,25 @@
         private System.Windows.Forms.Label AjudaDet1ao3;
         private System.Windows.Forms.Label AjudaOposta;
         private System.Windows.Forms.Label AjudaTranspo;
+        private System.Windows.Forms.DataVisualization.Charting.Chart grafico;
+        private System.Windows.Forms.NumericUpDown ColunasGeo;
+        private System.Windows.Forms.NumericUpDown LinhasGeo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button escalar;
+        private System.Windows.Forms.Button translacaoy;
+        private System.Windows.Forms.Button translacaox;
+        private System.Windows.Forms.Button Rotatebt;
+        private System.Windows.Forms.Button simetriay;
+        private System.Windows.Forms.Button simetriax;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox escalarbox;
+        private System.Windows.Forms.TextBox translaçaoybox;
+        private System.Windows.Forms.TextBox translaçãoxbox;
+        private System.Windows.Forms.TextBox rotacionarbox;
+        private System.Windows.Forms.Button gerarForma;
+        private System.Windows.Forms.Button gerarMatrizGeoBt;
 
     }
 }

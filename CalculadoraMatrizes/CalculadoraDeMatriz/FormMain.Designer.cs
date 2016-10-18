@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.Entre = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Entre
@@ -44,6 +45,17 @@
             this.Entre.UseVisualStyleBackColor = true;
             this.Entre.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(67, 439);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(349, 92);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Eduarda Helena e Hugo Fonseca\r\nTurma: 2003 - 2016\r\nProfessores: Cris Neves e Anto" +
+    "anne Pontes\r\nTrabalho integrado\r\n";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -51,6 +63,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1233, 564);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Entre);
             this.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Teal;
@@ -59,12 +72,14 @@
             this.Text = "Calculadora de Matrizes";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button Entre;
+        private System.Windows.Forms.Label label1;
     }
 }
 

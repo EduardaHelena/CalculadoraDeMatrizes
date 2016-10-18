@@ -29,12 +29,7 @@ namespace CalculadoraDeMatriz
             return matrizResultado;
         }
         #endregion
-        /// <summary>
-        /// método de somar as matrízes
-        /// </summary>
-        /// <param name="matriz1"></matriz1 em float>
-        /// <param name="matriz2"></matriz2 em float>
-        /// <returns></returns>
+       
         #region Subtração de matrizes
         /// <summary>
         /// método de subtrair as matrízes
@@ -58,7 +53,7 @@ namespace CalculadoraDeMatriz
 
         #region Multiplicacao de Matrizes
         /// <summary>
-        /// método de multiplicar as matrízes
+        /// método de multiplicar Matriz 1 vezes a Matriz 2
         /// </summary>
         /// <param name="matriz1"></matriz1 em float>
         /// <param name="matriz2"></matriz2 em float>

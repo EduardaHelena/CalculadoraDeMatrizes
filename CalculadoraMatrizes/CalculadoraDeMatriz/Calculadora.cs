@@ -229,7 +229,7 @@ namespace CalculadoraDeMatriz
             float[,] tempMatriz2 = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
             if (tempMatriz1.GetLength(0) != tempMatriz2.GetLength(0) || tempMatriz1.GetLength(1) != tempMatriz2.GetLength(1))
             {
-                MessageBox.Show("Somente é possível a subtração de matrizes de mesma ordem !"); //mensagem de erro para case tentem subtrair matrizes que não sejam de mesma ordem
+                MessageBox.Show("Só é possível subtrair matrizes de mesma ordem !"); //mensagem de erro para case tentem subtrair matrizes que não sejam de mesma ordem
                 return;
             }
 
@@ -286,7 +286,7 @@ namespace CalculadoraDeMatriz
             float[,] tempMatriz2 = new float[Matriz2.GetLength(0), Matriz2.GetLength(1)];
             if (tempMatriz1.GetLength(1) != tempMatriz2.GetLength(0))
             {
-                MessageBox.Show("Só é possível a multiplicação de matrizes onde, a coluna da matriz 1 e igual a linha da matriz 2  !", "Erro - Multiplicação Matrizes");
+                MessageBox.Show("Só é possível a multiplicar matrizes onde, a quantidade de colunas da matriz 1 e igual a quantidade de linhas da matriz 2  !", "Erro - Multiplicação Matrizes");
                 return;
             }
 
@@ -452,7 +452,7 @@ namespace CalculadoraDeMatriz
             {
                 if (tempResultante.GetLength(0) != 3 || tempResultante.GetLength(1) != 3)
                 {
-                    MessageBox.Show("Matriz invalida !", "Error - Matriz");
+                    MessageBox.Show("Nossa calcualdora só efetua a inversa de matrizes até 3x3 !", "Error - Matriz");
                     return;
                 }
             }
@@ -574,7 +574,7 @@ namespace CalculadoraDeMatriz
             }
             else
             {
-                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida "); 
+                MessageBox.Show("Nossa calcualdora só encontra o determinante de matrizes até 3x3 !", "Error - Matriz inválida "); 
             }
         }
 
@@ -702,7 +702,7 @@ namespace CalculadoraDeMatriz
             {
                 if (tempResultante.GetLength(0) != 3 || tempResultante.GetLength(1) != 3)
                 {
-                    MessageBox.Show("Matriz invalida !", "Error - Matriz");
+                    MessageBox.Show("Nossa calcualdora só efetua a inversa de matrizes até 3x3 !", "Error - Matriz");
                     return;
                 }
             }
@@ -736,7 +736,7 @@ namespace CalculadoraDeMatriz
             }
             if (determinante == 0)
             {
-                MessageBox.Show("Matriz invalida, determinante igual a 0 !", "Error - Matriz");
+                MessageBox.Show("Matriz inválida, determinante igual a 0 !", "Error - Matriz");
                 return;
             }
             float[,] tempMatrizResultante = Calculos.GerarInversa(determinante, matrizAdjunta);
@@ -824,7 +824,7 @@ namespace CalculadoraDeMatriz
             }
             else
             {
-                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida ");
+                MessageBox.Show("Nossa calcualdora só encontra o determinante de matrizes até 3x3 !", "Error - Matriz invalida ");
             }
         }
 
@@ -950,7 +950,7 @@ namespace CalculadoraDeMatriz
             {
                 if (tempResultante.GetLength(0) != 3 || tempResultante.GetLength(1) != 3)
                 {
-                    MessageBox.Show("Matriz invalida !", "Error - Matriz");
+                    MessageBox.Show("Matriz inválida !", "Error - Matriz");
                     return;
                 }
             }
@@ -979,12 +979,12 @@ namespace CalculadoraDeMatriz
             }
             else
             {
-                MessageBox.Show("Matriz invalida !", "Error - Matriz");
+                MessageBox.Show("Matriz inválida !", "Error - Matriz");
                 return;
             }
             if (determinante == 0)
             {
-                MessageBox.Show("Matriz invalida, determinante igual a 0 !", "Error - Matriz");
+                MessageBox.Show("Matriz inválida, determinante igual a 0 !", "Error - Matriz");
                 return;
             }
             float[,] tempMatrizResultante = Calculos.GerarInversa(determinante, matrizAdjunta);
@@ -1072,7 +1072,7 @@ namespace CalculadoraDeMatriz
             }
             else
             {
-                MessageBox.Show("Não é possível gerar o determinante desta matriz ! Só conseguimos programar o determinante de matrizes com ordem menor ou igual a 3x3.", "Error - Matriz invalida ");
+                MessageBox.Show("Nossa calcualdora só encontra o determinante de matrizes até 3x3 !", "Error - Matriz invalida ");
             }
         }
 

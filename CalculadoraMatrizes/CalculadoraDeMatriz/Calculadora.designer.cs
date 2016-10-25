@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint33 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint34 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint35 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.Plano_Cartesiano = new System.Windows.Forms.TabPage();
+            this.LimparMatrizG = new System.Windows.Forms.Button();
             this.gerarForma = new System.Windows.Forms.Button();
             this.gerarMatrizGeoBt = new System.Windows.Forms.Button();
             this.escalarbox = new System.Windows.Forms.TextBox();
@@ -111,7 +112,6 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.LimparMatrizG = new System.Windows.Forms.Button();
             this.Plano_Cartesiano.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColunasGeo)).BeginInit();
@@ -160,6 +160,21 @@
             this.Plano_Cartesiano.Size = new System.Drawing.Size(1419, 649);
             this.Plano_Cartesiano.TabIndex = 1;
             this.Plano_Cartesiano.Text = "Plano Cartesiano";
+            // 
+            // LimparMatrizG
+            // 
+            this.LimparMatrizG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.LimparMatrizG.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LimparMatrizG.ForeColor = System.Drawing.Color.Teal;
+            this.LimparMatrizG.Location = new System.Drawing.Point(177, 104);
+            this.LimparMatrizG.Name = "LimparMatrizG";
+            this.LimparMatrizG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LimparMatrizG.Size = new System.Drawing.Size(114, 27);
+            this.LimparMatrizG.TabIndex = 36;
+            this.LimparMatrizG.Text = "Limpar";
+            this.toolTip1.SetToolTip(this.LimparMatrizG, "Limpa a Matriz 1");
+            this.LimparMatrizG.UseVisualStyleBackColor = false;
+            this.LimparMatrizG.Click += new System.EventHandler(this.LimparMatrizG_Click);
             // 
             // gerarForma
             // 
@@ -405,29 +420,29 @@
             // 
             this.grafico.BackColor = System.Drawing.Color.Teal;
             this.grafico.BorderlineColor = System.Drawing.Color.Teal;
-            chartArea1.Name = "ChartArea1";
-            this.grafico.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.grafico.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.grafico.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.grafico.Legends.Add(legend7);
             this.grafico.Location = new System.Drawing.Point(320, 148);
             this.grafico.Name = "grafico";
             this.grafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Matriz";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Eixos";
-            series2.Points.Add(dataPoint1);
-            series2.Points.Add(dataPoint2);
-            series2.Points.Add(dataPoint3);
-            series2.Points.Add(dataPoint4);
-            series2.Points.Add(dataPoint5);
-            this.grafico.Series.Add(series1);
-            this.grafico.Series.Add(series2);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Legend = "Legend1";
+            series13.Name = "Matriz";
+            series14.BorderWidth = 2;
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series14.Legend = "Legend1";
+            series14.Name = "Eixos";
+            series14.Points.Add(dataPoint31);
+            series14.Points.Add(dataPoint32);
+            series14.Points.Add(dataPoint33);
+            series14.Points.Add(dataPoint34);
+            series14.Points.Add(dataPoint35);
+            this.grafico.Series.Add(series13);
+            this.grafico.Series.Add(series14);
             this.grafico.Size = new System.Drawing.Size(960, 453);
             this.grafico.TabIndex = 0;
             this.grafico.Text = "chart1";
@@ -603,9 +618,9 @@
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(510, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.Size = new System.Drawing.Size(143, 23);
             this.label2.TabIndex = 45;
-            this.label2.Text = "lei de Formação:";
+            this.label2.Text = "Lei de Formação:";
             // 
             // LeideForma
             // 
@@ -614,9 +629,9 @@
             this.LeideForma.ForeColor = System.Drawing.Color.Teal;
             this.LeideForma.Location = new System.Drawing.Point(16, 103);
             this.LeideForma.Name = "LeideForma";
-            this.LeideForma.Size = new System.Drawing.Size(138, 23);
+            this.LeideForma.Size = new System.Drawing.Size(143, 23);
             this.LeideForma.TabIndex = 43;
-            this.LeideForma.Text = "lei de Formação:";
+            this.LeideForma.Text = "Lei de Formação:";
             // 
             // Colunas1
             // 
@@ -906,7 +921,7 @@
             this.BotaoSubtrair.Name = "BotaoSubtrair";
             this.BotaoSubtrair.Size = new System.Drawing.Size(114, 26);
             this.BotaoSubtrair.TabIndex = 27;
-            this.BotaoSubtrair.Text = "matriz1-matriz2\n";
+            this.BotaoSubtrair.Text = "Matriz1-Matriz2\n";
             this.toolTip4.SetToolTip(this.BotaoSubtrair, "Subtrai as matrizes");
             this.BotaoSubtrair.UseVisualStyleBackColor = false;
             this.BotaoSubtrair.Click += new System.EventHandler(this.BotaoSubtrair_Click);
@@ -934,7 +949,7 @@
             this.BotaoAlternar.Name = "BotaoAlternar";
             this.BotaoAlternar.Size = new System.Drawing.Size(114, 28);
             this.BotaoAlternar.TabIndex = 25;
-            this.BotaoAlternar.Text = "Alternar matrizes";
+            this.BotaoAlternar.Text = "Alternar Matrizes";
             this.toolTip4.SetToolTip(this.BotaoAlternar, "Alterna as matrizes");
             this.BotaoAlternar.UseVisualStyleBackColor = false;
             // 
@@ -947,7 +962,7 @@
             this.BotaoSoma.Name = "BotaoSoma";
             this.BotaoSoma.Size = new System.Drawing.Size(114, 28);
             this.BotaoSoma.TabIndex = 24;
-            this.BotaoSoma.Text = "matriz1+matriz2";
+            this.BotaoSoma.Text = "Matriz1+Matriz2";
             this.toolTip4.SetToolTip(this.BotaoSoma, "Soma as Matrizes");
             this.BotaoSoma.UseVisualStyleBackColor = false;
             this.BotaoSoma.Click += new System.EventHandler(this.BotaoSoma_Click);
@@ -961,7 +976,7 @@
             this.Multiplica.Name = "Multiplica";
             this.Multiplica.Size = new System.Drawing.Size(114, 28);
             this.Multiplica.TabIndex = 23;
-            this.Multiplica.Text = "matriz1 * matriz2";
+            this.Multiplica.Text = "Matriz1*Matriz2";
             this.toolTip4.SetToolTip(this.Multiplica, "Multiplica  as  Matrizes");
             this.Multiplica.UseVisualStyleBackColor = false;
             this.Multiplica.Click += new System.EventHandler(this.Multiplica_Click);
@@ -1098,21 +1113,6 @@
             this.SomaAjuda.TabIndex = 0;
             this.SomaAjuda.Text = resources.GetString("SomaAjuda.Text");
             this.SomaAjuda.UseWaitCursor = true;
-            // 
-            // LimparMatrizG
-            // 
-            this.LimparMatrizG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.LimparMatrizG.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparMatrizG.ForeColor = System.Drawing.Color.Teal;
-            this.LimparMatrizG.Location = new System.Drawing.Point(177, 104);
-            this.LimparMatrizG.Name = "LimparMatrizG";
-            this.LimparMatrizG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LimparMatrizG.Size = new System.Drawing.Size(114, 27);
-            this.LimparMatrizG.TabIndex = 36;
-            this.LimparMatrizG.Text = "Limpar";
-            this.toolTip1.SetToolTip(this.LimparMatrizG, "Limpa a Matriz 1");
-            this.LimparMatrizG.UseVisualStyleBackColor = false;
-            this.LimparMatrizG.Click += new System.EventHandler(this.LimparMatrizG_Click);
             // 
             // Calculadora
             // 

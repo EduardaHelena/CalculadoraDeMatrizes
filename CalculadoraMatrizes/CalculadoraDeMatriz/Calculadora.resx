@@ -129,6 +129,18 @@
   <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>111, 15</value>
   </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 15</value>
+  </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 15</value>
+  </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 15</value>
+  </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 15</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LimparA.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -302,7 +314,7 @@ sejam obtida uma sequência de 5 colunas, somar os produtos das diagonais princi
   <data name="AjudaOposta.Text" xml:space="preserve">
     <value>MATRIZ OPOSTA →
 O oposto de um número é o seu simétrico, ou seja, o oposto de 5 é -5, o posto de -2 é 2. Nesse mesmo sentido encontraremos o oposto de uma matriz. 
-Dada uma matriz B = (bij) m x n, a sua matriz oposta será representada por –B. Isso significa que para encontrar o oposto de uma matriz basta tornar 
+Dada uma matriz B = (bij)m x n, a sua matriz oposta será representada por –B. Isso significa que para encontrar o oposto de uma matriz basta tornar 
 todos os elementos da matriz em seus opostos.</value>
   </data>
   <data name="AjudaTranspo.Text" xml:space="preserve">
@@ -335,6 +347,18 @@ Dadas duas  matrizes  A = (aij) e  B = (bij) de ordem m x n, A + B resultará em
 Ou seja, para que duas matrizes A e B possam ser somadas, se ambas têm que ter a mesma ordem e neste caso, somamos os respectivos elementos 
 de cada matriz que ocupam a mesma posição.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>14, 15</value>
+  </metadata>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>111, 15</value>
+  </metadata>
+  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>208, 15</value>
+  </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 15</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>32</value>
   </metadata>

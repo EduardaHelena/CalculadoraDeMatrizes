@@ -111,3 +111,13 @@ C:\Users\eduarda.costa\Downloads\CalculadoraDeMatrizes-bcb02b84b53a8da5c9cddeb28
 C:\Users\eduarda.costa\Downloads\CalculadoraDeMatrizes-bcb02b84b53a8da5c9cddeb2845449dec9750634\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe
 C:\Users\eduarda.costa\Downloads\CalculadoraDeMatrizes-bcb02b84b53a8da5c9cddeb2845449dec9750634\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.pdb
 C:\Users\eduarda.costa\Downloads\CalculadoraDeMatrizes-bcb02b84b53a8da5c9cddeb2845449dec9750634\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe.config
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.exe
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.exe
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\bin\Debug\CalculadoraDeMatriz.pdb
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csprojResolveAssemblyReference.cache
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Calculadora.resources
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.FormMain.resources
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.Properties.Resources.resources
+C:\Users\hugo.silva\Downloads\CalculadoraDeMatrizes-master\CalculadoraMatrizes\CalculadoraDeMatriz\obj\Debug\CalculadoraDeMatriz.csproj.GenerateResource.Cache

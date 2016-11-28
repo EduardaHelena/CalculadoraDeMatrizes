@@ -26,57 +26,6 @@ namespace CalculadoraDeMatriz
             {
                 throw new NoMatrixException();
             }
-            // para redimensionar o plano
-            float high = 0;
-            if (high < 10)
-            {
-
-                chart.ChartAreas[0].AxisX.Minimum = -10;
-                chart.ChartAreas[0].AxisX.Maximum = 10;
-                chart.ChartAreas[0].AxisY.Minimum = -10;
-                chart.ChartAreas[0].AxisY.Maximum = 10;
-                chart.ChartAreas[0].AxisX2.Minimum = -10;
-                chart.ChartAreas[0].AxisX2.Maximum = 10;
-                chart.ChartAreas[0].AxisY2.Minimum = -10;
-                chart.ChartAreas[0].AxisY2.Maximum = 10;
-                chart.Series["Eixos"].Points[0].SetValueXY(-10, 0);
-                chart.Series["Eixos"].Points[1].SetValueXY(10, 0);
-                chart.Series["Eixos"].Points[2].SetValueXY(0, 0);
-                chart.Series["Eixos"].Points[3].SetValueXY(0, -10);
-                chart.Series["Eixos"].Points[4].SetValueXY(0, 10);
-            }
-            else if (high > 50)
-            {
-                chart.ChartAreas[0].AxisX.Minimum = -Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisX.Maximum = Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisY.Minimum = -Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisY.Maximum = Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisX2.Minimum = -Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisX2.Maximum = Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisY2.Minimum = -Math.Round(high * 1.1f);
-                chart.ChartAreas[0].AxisY2.Maximum = Math.Round(high * 1.1f);
-                chart.Series["Eixos"].Points[0].SetValueXY(-Math.Round(high * 1.1f), 0);
-                chart.Series["Eixos"].Points[1].SetValueXY(Math.Round(high * 1.1f), 0);
-                chart.Series["Eixos"].Points[2].SetValueXY(0, 0);
-                chart.Series["Eixos"].Points[3].SetValueXY(0, -Math.Round(high * 1.1f));
-                chart.Series["Eixos"].Points[4].SetValueXY(0, Math.Round(high * 1.1f));
-            }
-            else
-            {
-                chart.ChartAreas[0].AxisX.Minimum = -50;
-                chart.ChartAreas[0].AxisX.Maximum = 50;
-                chart.ChartAreas[0].AxisY.Minimum = -50;
-                chart.ChartAreas[0].AxisY.Maximum = 50;
-                chart.ChartAreas[0].AxisX2.Minimum = -50;
-                chart.ChartAreas[0].AxisX2.Maximum = 50;
-                chart.ChartAreas[0].AxisY2.Minimum = -50;
-                chart.ChartAreas[0].AxisY2.Maximum = 50;
-                chart.Series["Eixos"].Points[0].SetValueXY(-50, 0);
-                chart.Series["Eixos"].Points[1].SetValueXY(50, 0);
-                chart.Series["Eixos"].Points[2].SetValueXY(0, 0);
-                chart.Series["Eixos"].Points[3].SetValueXY(0, -50);
-                chart.Series["Eixos"].Points[4].SetValueXY(0, 50);
-            }
             chart.Series[series].Points.Clear();
             for (int j = 0; j < matriz.GetLength(1); j++)
             {

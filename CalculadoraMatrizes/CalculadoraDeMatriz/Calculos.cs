@@ -196,7 +196,7 @@ namespace CalculadoraDeMatriz
             return matrizCofatora;
         }
         #endregion
-
+    
         #region Cofatora 3x3
         public static float[,] GerarCofatora3x3(float[,] matriz1)
         {
